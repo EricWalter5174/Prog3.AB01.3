@@ -7,9 +7,9 @@ public class Main {
 
     public static void main(String[] args) throws IOException{
         URL url = Main.class.getResource("/Baritone.wav");
-        SimpleAudioPlayerAdapter player = new SimpleAudioPlayerAdapter(url);
-        player.einmaligAbspielen(url);
-        player.tonAus();
-        player.einmaligAbspielen(url);
+        SimpleAudioPlayerAdapter adapter = new SimpleAudioPlayerAdapter();
+        adapter.einmaligAbspielen(url);
+        adapter.tonAus();
+        adapter.einmaligAbspielen(url);
     }
 }

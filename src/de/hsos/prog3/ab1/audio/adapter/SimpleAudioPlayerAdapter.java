@@ -11,31 +11,36 @@ import java.io.IOException;
 //erzeugt werden. Folge wären nicht verwendbare tonAus und tonAn Methoden. mMn fehlt eine setURL-Methode im SimpleAudioPlayer.
 
 public class SimpleAudioPlayerAdapter implements StdAudioPlayer{
-    SimpleAudioPlayer player;
+    private SimpleAudioPlayer player;
+    private URL url;
 
-    public SimpleAudioPlayerAdapter(URL inputUrl) throws IOException{
-        this.player = new SimpleAudioPlayer(inputUrl);
-    }
 
     @Override
     public void einmaligAbspielen(URL url) throws IOException {
+        this.url = url;
         player.play(0);
     }
 
     @Override
     public void wiederholtesAbspielen(URL url, int wiederholungen) throws IOException {
-        player.play(wiederholungen);
+        for(int i = 1; i <= wiederholungen; i++) {
+            einmaligAbspielen(url);
+        }
     }
 
     @Override
     public void tonAus(){
-        player.setDebug(true);
-        player.verboseLogging(true);
+        if(player != null){
+            player.setDebug(true);
+            player.verboseLogging(true);
+        }
     }
 
     @Override
     public void tonAn(){
-        player.setDebug(false);
-        player.verboseLogging(true);
+        if(player != null) {
+            player.setDebug(false);
+            player.verboseLogging(true);
+        }
     }
 }
