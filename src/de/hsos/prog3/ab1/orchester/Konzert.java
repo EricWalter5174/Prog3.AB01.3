@@ -2,6 +2,7 @@
 Autor: Eric Walter
 Programmierung 3, AB01, Tapken, Sommersemester 2020
 */
+/*
 package de.hsos.prog3.ab1.orchester;
 
 import de.hsos.prog3.ab1.audio.StdAudioPlayer;
@@ -23,3 +24,4 @@ public class Konzert implements Verhalten{
         }
     }
 }
+*/
