@@ -5,7 +5,9 @@ Programmierung 3, AB01, Tapken, Sommersemester 2020
 Anmerkung zu 1.5:
 Es ist möglich innere Klassen zu verwenden, wenn die geschachtelte Klasse engen Bezug zur schachtelnden Klasse besitzt.
 In diesem Fall wäre das gegeben. Dadurch wird sowohl die Anzahl der .java Klassen im Projekt-Explorer verringert,
-als auch der Bezug der Klassen deutlich. Allerdings leidet die Übersichtlichkeit der schachtelnden Klasse.
+als auch der Bezug der Klassen deutlich. Allerdings leidet die Übersichtlichkeit der schachtelnden Klasse. Außerdem wäre
+es unpraktisch, wenn man zu einem späteren Zeitpunkt von einer anderen Klasse auf diese inneren Klassen zugreifen möchte,
+da man diese dann genauso gut in einer separaten Klasse implementieren müsste.
 */
 package de.hsos.prog3.ab1.orchester;
 
@@ -58,7 +60,7 @@ public class Orchester{
     }
 
     //1.5
-    public class Probe implements Verhalten {
+    private class Probe implements Verhalten {
         @Override
         public void spielen(Orchester orchester) {
             if(orchester.getMusikerInnen() != null){
@@ -75,7 +77,8 @@ public class Orchester{
             }
         }
     }
-    public class Konzert implements Verhalten{
+
+    private class Konzert implements Verhalten{
 
         @Override
         public void spielen(Orchester orchester) {
