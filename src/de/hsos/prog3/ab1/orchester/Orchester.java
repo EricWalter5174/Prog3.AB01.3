@@ -1,13 +1,16 @@
 /*
 Autor: Eric Walter
-Programmierung 3, AB01, Tapken, Sommersemester 2020
+Programmierung 3, AB01
+Prof. Dr.-Ing. Heiko Tapken
+Sommersemester 2020
 
 Anmerkung zu 1.5:
-Es ist möglich innere Klassen zu verwenden, wenn die geschachtelte Klasse engen Bezug zur schachtelnden Klasse besitzt.
+Es ratsam innere Klassen zu verwenden, wenn die geschachtelte Klasse engen Bezug zur schachtelnden Klasse besitzt.
 In diesem Fall wäre das gegeben. Dadurch wird sowohl die Anzahl der .java Klassen im Projekt-Explorer verringert,
-als auch der Bezug der Klassen deutlich. Allerdings leidet die Übersichtlichkeit der schachtelnden Klasse. Außerdem wäre
-es unpraktisch, wenn man zu einem späteren Zeitpunkt von einer anderen Klasse auf diese inneren Klassen zugreifen möchte,
-da man diese dann genauso gut in einer separaten Klasse implementieren müsste.
+als auch der Bezug der Klassen zu einander deutlich. Allerdings leidet die Übersichtlichkeit der schachtelnden Klasse.
+Außerdem wäre es unpraktisch, wenn man zu einem späteren Zeitpunkt von einer anderen Klasse auf diese inneren Klassen
+zugreifen möchte, da man diese dann genauso gut in einer separaten Klasse implementieren, oder als innere Klasse public
+machen müsste.
 */
 package de.hsos.prog3.ab1.orchester;
 
