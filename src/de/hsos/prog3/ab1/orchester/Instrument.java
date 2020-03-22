@@ -1,9 +1,9 @@
 package de.hsos.prog3.ab1.orchester;
 
 public enum Instrument {
-    SAXOPHON("res/Baritone.wav"),
-    SCHLAGZEUG("res/Drum.wav"),
-    AKKORDION("res/Accordion.wav");
+    SAXOPHON("/Baritone.wav"),
+    SCHLAGZEUG("/Drum.wav"),
+    AKKORDION("/Accordion.wav");
 
     private String audiodatei;
 

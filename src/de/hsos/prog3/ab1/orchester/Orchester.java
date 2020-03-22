@@ -14,7 +14,6 @@ package de.hsos.prog3.ab1.orchester;
 import com.company.Main;
 import de.hsos.prog3.ab1.audio.StdAudioPlayer;
 import de.hsos.prog3.ab1.audio.adapter.SimpleAudioPlayerAdapter;
-
 import java.io.IOException;
 import java.net.URL;
 import java.util.HashSet;
